@@ -1,0 +1,3 @@
+Dears Udacity team,
+
+for load i load manually , I extract he data to small data and load it without coding.

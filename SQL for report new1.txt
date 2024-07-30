@@ -1,0 +1,12 @@
+select b.business_name,
+       t.TEMPERATURE_DATE,
+       t.TEMP_MIN,
+       t.TEMP_MAX,
+       p.precipitation,
+       p.precipitation_normal,
+       r.stars 
+from project_ud.DWH.FACT as f
+join project_ud.DWH.BUSINESS as b on f.business_id = b.business_id
+join project_ud.DWH.TEMPERATURE as t on f.temperature_date = t.temperature_date
+join project_ud.DWH.PRECIPITATION as p on f.precipitation_date = p.precipitation_date
+join project_ud.DWH.REVIEW as r on f.review_id = r.review_id

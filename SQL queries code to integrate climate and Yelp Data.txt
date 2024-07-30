@@ -1,0 +1,16 @@
+SELECT * 
+	FROM precipitation AS p
+	JOIN review AS r 
+	ON r.date_review = p.date_precipitation 
+	JOIN temperature AS t
+	ON t.date_temperature = r.date_review
+	JOIN business AS bu
+	ON bu.business_id = r.business_id
+    JOIN covid AS c
+	ON bu.business_id = c.business_id
+	JOIN checkin AS ch
+	ON bu.business_id = ch.business_id
+	JOIN tip AS x
+	ON bu.business_id = x.business_id
+    JOIN user AS u
+    ON us.user_id = r.user_id;
